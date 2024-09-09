@@ -1,0 +1,190 @@
+/* Genel sayfa stili */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Sayfa kaydırmasını engelle */
+}
+
+/* Harita konteyneri */
+#map-container {
+    width: 100vw; /* Tam genişlik */
+    height: 100vh; /* Tam yükseklik */
+    position: relative;
+}
+
+/* Daire şeklinde butonlar */
+.circle-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #4CAF50;
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.circle-button:hover {
+    background-color: #45a049; /* Hover efekti */
+}
+
+#add-point {
+    bottom: 20px;
+    right: 80px;
+}
+
+#query {
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Popup ve sorgu paneli stilleri */
+.popup, #query-panel {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9); /* Yarı saydam beyaz arka plan */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Başlangıçta gizli olmalı */
+}
+
+/* Popup form etiket ve giriş stilleri */
+.popup form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.popup form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Padding ve border dahil genişlik ayarı */
+}
+
+/* Popup form buton stilleri */
+.popup form button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.popup form button:hover {
+    background-color: #45a049; /* Hover efekti */
+}
+
+/* Tablo stilleri */
+#points-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#points-table th, #points-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+#points-table th {
+    background-color: #e3f2fd;
+    color: #333;
+    font-weight: bold;
+}
+
+#points-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Kapatma butonu */
+#close-query {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #d9534f;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#close-query:hover {
+    background-color: #c9302c; /* Hover efekti */
+}
+
+/* Yeni popup menü stili */
+#add-options-popup {
+    width: 300px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 200;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#add-options-popup button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#add-options-popup button:hover {
+    background-color: #45a049;
+}
+
+/* Özelleştirilmiş stil kodları */
+
+#feature-popup form input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#feature-popup form button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+}
+
+#feature-popup form button:hover {
+    background-color: #45a049;
+}

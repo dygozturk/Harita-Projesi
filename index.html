@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harita Uygulaması</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
+</head>
+<body>
+    <div id="map-container"></div>
+    <button id="add-point" class="circle-button">+</button>
+
+    <!-- Nokta ekleme popup formu -->
+    <div id="popup" class="popup" style="display: none;">
+        <form id="point-form">
+            <label for="x-coordinate">X:</label>
+            <input type="text" id="x-coordinate" readonly>
+            <label for="y-coordinate">Y:</label>
+            <input type="text" id="y-coordinate" readonly>
+            <label for="point-name">Name:</label>
+            <input type="text" id="point-name" required>
+            <button type="submit">Kaydet</button>
+            <button type="button" id="cancel-button">İptal</button>
+        </form>
+    </div>
+
+    <!-- Çizgi ve Alan ekleme popup formu -->
+    <div id="feature-popup" class="popup" style="display: none;">
+        <form id="feature-form">
+            <label for="feature-name">Name:</label>
+            <input type="text" id="feature-name" required>
+            <button type="submit">Kaydet</button>
+            <button type="button" id="cancel-feature-button">İptal</button>
+        </form>
+    </div>
+
+    <!-- Sorgu paneli -->
+    <div id="query-panel" class="popup" style="display: none;">
+        <h3>Query Panel</h3>
+        <table id="points-table">
+            <thead>
+                <tr>
+                    <th>Tip</th>
+                    <th>İsim</th>
+                    <th>Geometri (WKT)</th>
+                    <th>İşlemler</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button id="close-query">Kapat</button>
+    </div>
+
+    <!-- Daire şeklinde butonlar -->
+    <div id="floating-buttons">
+        <button id="add-point" class="circle-button">+</button>
+        <button id="query" class="circle-button">?</button>
+    </div>
+
+    <!-- Yeni Ekleme Seçenekleri Menüsü -->
+    <div id="add-options-popup" class="popup" style="display: none;">
+        <button id="add-point-option">Nokta Ekle</button>
+        <button id="add-line-option">Çizgi Ekle</button>
+        <button id="add-polygon-option">Alan Ekle</button>
+        <button type="button" id="cancel-add-options">İptal</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
