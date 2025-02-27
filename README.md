@@ -21,16 +21,16 @@ Projeyi çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
    git clone https://github.com/kullaniciadi/harita-projesi.git
 
 2. **Dizin içine girin:**
-
-cd harita-projesi
+   ```sh
+   cd harita-projesi
 
 3. **Bağımlılıkları yükleyin:**
-
-npm install
+    ```sh
+    npm install
 
 4. **Projeyi başlatın:**
-
-npm start
+   ```sh
+   npm start
 
 ## 🗺 Kullanım
 
